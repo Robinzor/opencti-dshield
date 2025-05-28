@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dshield-connector:
+    build: .
+    volumes:
+      - ./data:/data
+      - ./.env:/app/.env
+    environment:
+      - TZ=UTC
+    restart: unless-stopped
+    command: [] 
