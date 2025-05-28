@@ -11,4 +11,4 @@ RUN mkdir -p /data
 
 ENV PYTHONUNBUFFERED=1
 
-ENTRYPOINT ["python", "dshield_connector.py"] 
+ENTRYPOINT ["python", "main.py"] 
