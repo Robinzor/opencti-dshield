@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY dshield_connector.py .
+
+RUN mkdir -p /data
+
+ENV PYTHONUNBUFFERED=1
+
+ENTRYPOINT ["python", "dshield_connector.py"] 
