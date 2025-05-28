@@ -9,4 +9,4 @@ services:
     environment:
       - TZ=UTC
     restart: unless-stopped
-    command: [] 
+    command: []
