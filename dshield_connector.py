@@ -9,9 +9,18 @@ from dotenv import load_dotenv
 from pycti import OpenCTIConnectorHelper, get_config_variable
 import time
 import stix2
+import urllib3
+
+# Disable SSL warnings
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Load environment variables
 load_dotenv()
+
+__version__ = "0.0.1"
+BANNER = f"""
+DShield importer, version {__version__}
+"""
 
 # Configure logging
 logging.basicConfig(
